@@ -1,0 +1,94 @@
+body {
+    margin:0;
+}
+
+a{
+    font-weight: bold;
+    font-family: "Calibri Light";
+    font-size: larger;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.94;
+}
+
+li.firstListItemMenuTop{
+    padding-left: 150px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px;
+    padding-left: 125px;
+    padding-right: 125px;
+    text-decoration: none;
+}
+
+.main {
+    padding: 16px;
+    height: 1080px; /* Used in this example to enable scrolling */
+    background-image: url(../ressources/oans.jpg);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.galerie {
+    padding: 16px;
+    height: 1080px; /* Used in this example to enable scrolling */
+    background-image: url(../ressources/zwoa.jpg);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.calender {
+    padding: 16px;
+    height: 1080px; /* Used in this example to enable scrolling */
+    background-image: url(../ressources/drei.jpg);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact {
+    padding: 16px;
+    height: 1080px; /* Used in this example to enable scrolling */
+    background-image: url(../ressources/vier.jpg);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about {
+    padding: 16px;
+    height: 1080px; /* Used in this example to enable scrolling */
+    background-image: url(../ressources/fuenf.jpg);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
