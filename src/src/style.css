@@ -37,6 +37,7 @@ li a {
     text-decoration: none;
 }
 
+
 .main {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
@@ -58,6 +59,8 @@ li a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+
 }
 .calender {
     padding: 16px;
@@ -91,4 +94,8 @@ li a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+li.bigPictures{
+    width: 720px;
+    height: 200px;
 }
