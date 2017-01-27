@@ -1,6 +1,32 @@
 div.title
 {
-color: #0098D4;
-font-family: "Calibri Light";
+    color: #0098D4;
+    font-family: "Calibri Light";
     margin-left: 45%;
+    font-size: large;
+    position: absolute;
+}
+div.input
+{
+    margin-top: 10%;
+    left: 42.5%;
+    position: absolute;
+    font-family: "Calibri Light";
+}
+input.inputName
+{
+    margin-left: 2px;
+}
+form{
+    font-weight: bold;
+    font-family: "Calibri Light";
+    font-size: larger;
+}
+input.inputSubmit
+{
+    font-weight: bold;
+    font-family: "Calibri Light";
+    font-size: large;
+    text-align: center;
+    width:100%;
 }
