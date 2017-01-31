@@ -26,31 +26,22 @@ function login($username, $passwort)
         $passwordDB = $row['Password'];
 
 
-        /*$doc = new DOMDocument();
-        $doc -> validateOnParse = true;
-        $doc -> Load('admin.php');*/
 
         $usernameGiven = $username;
         $passwordGiven = $passwort;
 
-/*      echo $usernameDB;
-        echo $passwordDB;
-
-        echo $usernameGiven;
-        echo $passwordGiven;*/
-
-        session_start();
 
         if(sha1($passwordGiven)===$passwordDB && $usernameDB ==$usernameGiven)
         {
-            echo "LOGIN ERFOLGREICH";
-
+            session_start();
+            $_SESSION['login'] = $usernameDB;
+            include ('adminSecret.php');
         }
         else{
             echo "USERNAME ODER PASSWORT FALSCH";
+            session_start();
+            session_destroy();
         }
-
-
     }
     else
     {
