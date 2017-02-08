@@ -21,9 +21,5 @@
             <input id="submit"  class="inputSubmit" type="submit" value="Anmelden">
         </form>
     </div>
-
-    <script type="text/javascript" language="JavaScript">
-
-    </script>
 </body>
 </html>

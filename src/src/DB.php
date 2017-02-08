@@ -38,7 +38,7 @@ function login($username, $passwort)
             include ('adminSecret.php');
         }
         else{
-            echo "USERNAME ODER PASSWORT FALSCH";
+            die('Ihr Passwort oder Usernam ist falsch. Bitte kehren sie zurück um sich  <a href="admin.php">einzuloggen!</a>');
             session_start();
             session_destroy();
         }
