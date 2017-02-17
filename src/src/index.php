@@ -32,9 +32,8 @@
             <a data-slide-index="0"   href=""><img class="thumber" src="../ressources/oans.jpg" /></a>
             <a data-slide-index="1"   href=""><img class="thumber" src="../ressources/zwoa.jpg" /></a>
             <a data-slide-index="2"  href=""><img  class="thumber" src="../ressources/drei.jpg" /></a>
-         <a data-slide-index="3"   href=""><img class="thumber" src="../ressources/fuenf.jpg" /></a>
-         <a data-slide-index="4"  href=""><img  class="thumber" src="../ressources/vier.jpg" /></a>
-
+            <a data-slide-index="3"   href=""><img class="thumber" src="../ressources/fuenf.jpg" /></a>
+            <a data-slide-index="4"  href=""><img  class="thumber" src="../ressources/vier.jpg" /></a>
      </ul>
 
         <ul class="bxslider">
@@ -53,8 +52,10 @@
 
 
 <div id="pointCalender" class="calender">
-
-</div>
+    <div class="googleCalender">
+        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=de&amp;bgcolor=%23ccccff&amp;src=nico.prechtl171%40gmail.com&amp;color=%23B1365F&amp;ctz=Europe%2FVienna" style="border:solid 1px #777" width="1200" height="600" frameborder="0" scrolling="no"></iframe>
+         </div>
+    </div>
 <div id="pointContact" class="contact">
 
 </div>
