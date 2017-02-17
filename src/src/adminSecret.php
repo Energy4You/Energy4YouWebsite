@@ -30,16 +30,8 @@ if (!isset($_SESSION['login']))
         </select>
 
         <button onclick="getData()"> Auswahl bestätigen</button>
-        </div>
 
-        <div id="bulletSides">
-            <ul id="bullets">
-                <li id="bullet1">seas</li>
-                <li id="bullet2">seas</li>
-                <li id="bullet3">seas</li>
-            </ul>
         </div>
-
         <div id="divtextArea" >
             <textarea id="textArea" style="margin-top: 1%;margin-left: 23%;width: 1000px;height: 500px;">
 
@@ -47,27 +39,27 @@ if (!isset($_SESSION['login']))
         </div>
 
 
-<script type="text/javascript" language="JavaScript">
-    function getData() {
 
-        var selectedElement = document.getElementById("tableSelect");
-        var selectedTableName = selectedElement.options[selectedElement.selectedIndex].value;
-        alert(selectedTableName);
+<?php
 
+function rowcolumn($actionBTN)
+{
+    $db_link = mysqli_connect(MYSQL_HOST,
+        MYSQL_BENUTZER,
+        MYSQL_KENNWORT,
+        MYSQL_DATENBANK);
 
-        if (selectedTableName = 'hauptseitentext')
-        {
+    $selectedItem = $actionBTN;
 
-        }
-        else if (selectedTableName = 'lebenslauftext')
-        {
+    if ($db_link) {
 
-        }
-        else if(selectedTableName = 'kontakttext')
-        {
-
-        }
     }
-</script>
+    else
+    {
+        echo "Die Datenbank konnte keine Verbindung zu MySQL herstellen.";
+    }
+}
+?>
+
 </body>
 </html>
