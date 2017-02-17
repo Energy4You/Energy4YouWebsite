@@ -19,8 +19,43 @@
     <li><a href="#pointAbout">Über mich</a></li>
 </ul>
 
+<?php
+    define ( 'MYSQL_HOST',      'localhost' );
+    define ( 'MYSQL_BENUTZER',  'root' );
+    define ( 'MYSQL_KENNWORT',  '' );
+    define ( 'MYSQL_DATENBANK', 'u211528407_e4u' );
+
+    $db_link = mysqli_connect (MYSQL_HOST,
+        MYSQL_BENUTZER,
+        MYSQL_KENNWORT,
+        MYSQL_DATENBANK);
+
+    if ( $db_link ) {
+        mysqli_set_charset($db_link, 'utf8');
+        $queryHome = mysqli_query($db_link,"SELECT `Überschrift`, `Text` FROM `hauptseitetext` WHERE 1");
+        $queryContact = mysqli_query($db_link,"SELECT `Anschrift`, `Email`, `Telefon` FROM `hauptseitetext` WHERE 1");
+        $queryAbout = mysqli_query($db_link,"SELECT `Lebenslauf`, `Ausbildung` FROM `hauptseitetext` WHERE 1");
+        $rowHome = mysqli_fetch_array($queryHome);
+        $rowContact = mysqli_fetch_array($queryContact);
+        $rowAbout = mysqli_fetch_array($queryAbout);
+        $homeueberschrift= $rowHome['Überschrift'];
+        $hometext = $rowHome['Text'];
+        $contactanschrift = $rowContact['Anschrift'];
+        $contactemail = $rowContact['Email'];
+        $contacttelefon = $rowContact['Telefon'];
+        $aboutlebenslauf = $rowAbout['Lebenslauf'];
+        $aboutausbildung = $rowAbout['Ausbildung'];
+    }
+?>
+
 <div id="pointHome" class="main">
 
+    <div class="HomeDiv">
+        <h1><?php $homeueberschrift ?></h1>
+        <p>
+            <?php $hometext ?>
+        </p>
+    </div>
 </div>
 
 
@@ -57,11 +92,29 @@
          </div>
     </div>
 <div id="pointContact" class="contact">
-
+    <div class="ContactDiv">
+        <p>
+            <?php $contactemail ?>
+        </p>
+        <p>
+            <?php $contactanschrift ?>
+        </p>
+        <p>
+            <?php $contacttelefon ?>
+        </p>
+    </div>
 </div>
 
 <div id="pointAbout" class="about">
+    <div class="AboutDiv">
+        <p>
+            <?php $aboutlebenslauf ?>
+        </p>
+        <p>
+            <?php $aboutausbildung ?>
+        </p>
 
+    </div>
 </div>
 
 </body>

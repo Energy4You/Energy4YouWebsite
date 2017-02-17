@@ -120,3 +120,24 @@ li a {
     margin-left: auto;
     margin-right: auto;
 }
+
+.HomeDiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 30%;
+}
+
+.AboutDiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 30%;
+}
+
+.ContactDiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 30%;
+}
