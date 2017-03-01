@@ -33,8 +33,8 @@
     if ( $db_link ) {
         mysqli_set_charset($db_link, 'utf8');
         $queryHome = mysqli_query($db_link,"SELECT `Überschrift`, `Text` FROM `hauptseitetext` WHERE 1");
-        $queryContact = mysqli_query($db_link,"SELECT `Anschrift`, `Email`, `Telefon` FROM `hauptseitetext` WHERE 1");
-        $queryAbout = mysqli_query($db_link,"SELECT `Lebenslauf`, `Ausbildung` FROM `hauptseitetext` WHERE 1");
+        $queryContact = mysqli_query($db_link,"SELECT `Anschrift`, `Email`, `Telefon` FROM `kontakttext` WHERE 1");
+        $queryAbout = mysqli_query($db_link,"SELECT `Lebenslauf`, `Ausbildung` FROM `lebenslauftext` WHERE 1");
         $rowHome = mysqli_fetch_array($queryHome);
         $rowContact = mysqli_fetch_array($queryContact);
         $rowAbout = mysqli_fetch_array($queryAbout);
@@ -51,9 +51,9 @@
 <div id="pointHome" class="main">
 
     <div class="HomeDiv">
-        <h1><?php $homeueberschrift ?></h1>
+        <h1><?php echo $homeueberschrift; ?></h1>
         <p>
-            <?php $hometext ?>
+            <?php echo $hometext; ?>
         </p>
     </div>
 </div>
@@ -94,13 +94,13 @@
 <div id="pointContact" class="contact">
     <div class="ContactDiv">
         <p>
-            <?php $contactemail ?>
+            <?php echo $contactemail; ?>
         </p>
         <p>
-            <?php $contactanschrift ?>
+            <?php echo $contactanschrift; ?>
         </p>
         <p>
-            <?php $contacttelefon ?>
+            <?php echo $contacttelefon; ?>
         </p>
     </div>
 </div>
@@ -108,10 +108,10 @@
 <div id="pointAbout" class="about">
     <div class="AboutDiv">
         <p>
-            <?php $aboutlebenslauf ?>
+            <?php echo $aboutlebenslauf; ?>
         </p>
         <p>
-            <?php $aboutausbildung ?>
+            <?php echo $aboutausbildung; ?>
         </p>
 
     </div>

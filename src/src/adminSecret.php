@@ -22,44 +22,24 @@ if (!isset($_SESSION['login']))
 
         <div style="margin-left:40%;margin-top:5%;font-family: "Calibri Light";>
         <h2 style="margin-left: -8%"> Bitte wählen sie die gewünschte Kategorie aus</h2>
-
-        <select id="tableSelect" style="width: 10%;">
-        <option value="hauptseitetext" selected="selected">Hauptseite</option>
-        <option value="lebenslauftext">Lebenslauf</option>
-        <option value="kontakttext">Kontakt</option>
-        </select>
-
-        <button onclick="getData()"> Auswahl bestätigen</button>
-
-        </div>
-        <div id="divtextArea" >
-            <textarea id="textArea" style="margin-top: 1%;margin-left: 23%;width: 1000px;height: 500px;">
-
-            </textarea>
         </div>
 
-
-
-<?php
-
-function rowcolumn($actionBTN)
-{
-    $db_link = mysqli_connect(MYSQL_HOST,
-        MYSQL_BENUTZER,
-        MYSQL_KENNWORT,
-        MYSQL_DATENBANK);
-
-    $selectedItem = $actionBTN;
-
-    if ($db_link) {
-
-    }
-    else
-    {
-        echo "Die Datenbank konnte keine Verbindung zu MySQL herstellen.";
-    }
-}
-?>
-
+        <div id="pointEdit">
+            <Button style="margin-left: 36%" onclick="rowcolumn('hauptseitetext')">Hauptseite</Button>
+            <Button>Anschrift</Button>
+            <Button>E-Mail</Button>
+            <Button>Telefon</Button>
+            <Button>Lebenslauf</Button>
+            <Button>Ausbildung</Button>
+        </div>
+    <script>
+        function rowcolumn($table) {
+            alert("hallo");
+            $name = "editTextPHP.php";
+            alert('<?php
+                include ($name);
+                ?>');
+        }
+    </script>
 </body>
 </html>
