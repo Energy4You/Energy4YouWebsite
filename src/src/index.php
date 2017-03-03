@@ -59,24 +59,80 @@
 </div>
 
 
+<?php
+
+    //Bilder vom FTP DOWNLOADEN
+
+    $ftp_server = "zerbru.bplaced.net";
+    $ftp_user_name = "zerbru";
+    $ftp_user_pass = "energie";
+    $destination_file = "/Galerie/";
+
+    $conn = ftp_connect($ftp_server);
+    $login_result = ftp_login($conn, $ftp_user_name,$ftp_user_pass);
+
+    // check connection
+    if ((!$conn) || (!$login_result)) {
+        echo "FTP connection has failed!";
+        echo "Attempted to connect to $ftp_server for user $ftp_user_name";
+        exit;
+    }
+    ftp_pasv($conn, true);
+
+    $images = ftp_nlist($conn, $destination_file);
+    $count = 0;
+    foreach ($images as $image){
+
+        if ($image !== '.' && $image !== '..'){
+            $picture =$count . '.jpg';
+
+            $ret = ftp_get($conn,'..\ressources\\'.$picture,"$destination_file$image",FTP_BINARY);
+        }
+        $count = $count+1;
+    }
+
+    ftp_close($conn);
+
+    $alledateien = scandir('..\ressources');
+
+?>
+
+
 
 <div id="pointGalerie" class="galerie">
     <div class="galeryLayout">
 
      <ul class="carouselPager" id="bx-pager">
-            <a data-slide-index="0"   href=""><img class="thumber" src="../ressources/oans.jpg" /></a>
-            <a data-slide-index="1"   href=""><img class="thumber" src="../ressources/zwoa.jpg" /></a>
-            <a data-slide-index="2"  href=""><img  class="thumber" src="../ressources/drei.jpg" /></a>
-            <a data-slide-index="3"   href=""><img class="thumber" src="../ressources/fuenf.jpg" /></a>
-            <a data-slide-index="4"  href=""><img  class="thumber" src="../ressources/vier.jpg" /></a>
-     </ul>
+         <?php
+
+            $linkcount = 0;
+         foreach ($alledateien as $datei){
+
+             if ($datei !== '.' && $datei !== '..') {
+
+                 ?>
+                 <a data-slide-index="<?php echo $linkcount; ?>" href=""><img class="thumber"
+                                                                              src="../ressources/<?php echo $datei; ?>"/></a>
+                 <?php
+                 $linkcount = $linkcount + 1;
+             }
+         }
+
+         ?></ul>
+
 
         <ul class="bxslider">
-            <li><img src="../ressources/oans.jpg" /></li>
-            <li><img src="../ressources/zwoa.jpg" /></li>
-            <li><img src="../ressources/drei.jpg" /></li>
-            <li><img src="../ressources/fuenf.jpg" /></li>
-            <li><img src="../ressources/vier.jpg" /></li>
+            <?php
+                foreach ($alledateien as $data){
+                    if ($data !== '.' && $data !== '..'){
+
+                    ?>
+                    <li><img src="../ressources/<?php echo $data; ?>" /></li>
+                    <?php
+            }
+                }
+            ?>
+
         </ul>
 
     </div>

@@ -44,7 +44,7 @@ li a {
 .main {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
-    background-image: url(../ressources/oans.jpg);
+    background-image: url(../backgrounds/oans.jpg);
     background-repeat: no-repeat;
 
     background-attachment: fixed;
@@ -55,7 +55,7 @@ li a {
 .galerie {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
-    background-image: url(../ressources/zwoa.jpg);
+    background-image: url(../backgrounds/zwoa.jpg);
     background-repeat: no-repeat;
 
     background-attachment: fixed;
@@ -68,7 +68,7 @@ li a {
 .calender {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
-    background-image: url(../ressources/drei.jpg);
+    background-image: url(../backgrounds/drei.jpg);
     background-repeat: no-repeat;
 
     background-attachment: fixed;
@@ -79,7 +79,7 @@ li a {
 .contact {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
-    background-image: url(../ressources/vier.jpg);
+    background-image: url(../backgrounds/vier.jpg);
     background-repeat: no-repeat;
 
     background-attachment: fixed;
@@ -90,7 +90,7 @@ li a {
 .about {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
-    background-image: url(../ressources/fuenf.jpg);
+    background-image: url(../backgrounds/fuenf.jpg);
     background-repeat: no-repeat;
 
     background-attachment: fixed;
