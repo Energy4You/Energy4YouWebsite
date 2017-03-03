@@ -51,7 +51,6 @@
 <div id="pointHome" class="main">
 
     <div class="HomeDiv">
-        <h1><?php echo $homeueberschrift; ?></h1>
         <p>
             <?php echo $hometext; ?>
         </p>
