@@ -80,12 +80,26 @@
 
     $images = ftp_nlist($conn, $destination_file);
     $count = 0;
+    $vorhanden = false;
+    $checkImages = scandir('..\ressources');
     foreach ($images as $image){
 
         if ($image !== '.' && $image !== '..'){
             $picture =$count . '.jpg';
 
-            $ret = ftp_get($conn,'..\ressources\\'.$picture,"$destination_file$image",FTP_BINARY);
+
+            foreach ($checkImages as $check){
+                if ($check == $picture){
+                    $vorhanden = true;
+                }
+            }
+            if ($vorhanden == false){
+                $ret = ftp_get($conn,'..\ressources\\'.$picture,"$destination_file$image",FTP_BINARY);
+
+            }
+            $vorhanden = false;
+
+
         }
         $count = $count+1;
     }
