@@ -12,10 +12,7 @@ define ( 'MYSQL_DATENBANK', 'u211528407_e4u' );
         MYSQL_DATENBANK);
 
     if ($db_link) {
-        echo "<div id=\"divtextArea\" >
-    <textarea id=\"textArea\" style=\"margin-top: 1%;margin-left: 23%;width: 1000px;height: 500px;\">
-    
-    </textarea></div>";
+
     }
     else
     {

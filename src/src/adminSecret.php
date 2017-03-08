@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SAdmin</title>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <link href="adminCss.css" type="text/css" rel="stylesheet">
     <script src="adminJS.js"></script>
 </head>
@@ -26,16 +26,17 @@ if (!isset($_SESSION['login']))
 
         <div id="pointEdit">
             <div>
-            <Button style="margin-left: 36%" onclick="rowcolumn('hauptseitetext')">Hauptseite</Button>
-            <Button>Anschrift</Button>
-            <Button>E-Mail</Button>
-            <Button>Telefon</Button>
-            <Button>Lebenslauf</Button>
-            <Button>Ausbildung</Button>
+            <Button style="margin-left: 36%" onclick="rowcolumn('hauptseitetext','Text')">Hauptseite</Button>
+            <Button onclick="rowcolumn('kontakttext','Anschrift')">Anschrift</Button>
+            <Button onclick="rowcolumn('kontakttext','Email')">E-Mail</Button>
+            <Button onclick="rowcolumn('kontakttext','Telefon')">Telefon</Button>
+            <Button onclick="rowcolumn('lebenslauftext','Lebenslauf')">Lebenslauf</Button>
+            <Button onclick="rowcolumn('lebenslauftext','Ausbildung')">Ausbildung</Button>
             </div>
-            <textarea style="height: 400px;width: 600px;margin-left: 32%;margin-top: 1%;">
-
-            </textarea>
+            <pre style="margin-outside: 0%;">
+            <textarea id="textAreaEdit" style="height: 400px;width: 600px;margin-left: 28%;margin-top: 1%;"> Zu bearbeitender Text</textarea>
+            </pre>
+            <input style="margin-left: 36%" type="submit" value="Bestätigen" onclick="writeToDatabase()">
         </div>
 
 
@@ -44,17 +45,49 @@ if (!isset($_SESSION['login']))
 
             <form style="margin-top: 1%" action="upload.php" method="post" enctype="multipart/form-data">
                 <input type="file" name="file" id="passedFile">
-                <input type="submit" name="btn[upload]">
+                <input type="submit" name="btn[upload]" value="Upload">
             </form>
         </div>
 
     <script>
-        function rowcolumn($table) {
-            alert("hallo");
-            $name = "editTextPHP.php";
-            alert('<?php
-                include ($name);
-                ?>');
+
+        var table;
+        var column;
+
+        function rowcolumn($table,$column) {
+            alert('Tabelle: ' + $table + ', Spalte: ' + $column);
+            table = $table;
+            column = $column;
+
+            $.ajax({
+                type: "GET",
+                contentType: "application/json;charset-utf-8",
+                url: 'adminTextEdit.php',
+                data: {table:$table,column:$column},
+                success: function (text) {
+                    var result = text;
+                    $('#textAreaEdit').text('');
+                    $('#textAreaEdit').append(result);
+                }
+            });
+        }
+
+        function writeToDatabase()
+        {
+            alert('Upload data');
+
+            $text = $('#textAreaEdit').val();
+            alert($text);
+            $.ajax({
+                type: "GET",
+                contentType: "application/json;charset-utf-8",
+                url: 'adminUploadChanges.php',
+                data: {table:table,column:column,text:$text},
+                success: function (text) {
+                    var result = text;
+                    alert(result);
+                }
+            });
         }
     </script>
 </body>
