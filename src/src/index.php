@@ -49,11 +49,13 @@
 ?>
 
 <div id="pointHome" class="main">
-
     <div class="HomeDiv">
-        <p>
-            <?php echo $hometext; ?>
-        </p>
+
+        <h1>hallo</h1>
+        <pre>
+            <?php echo $hometext ?>
+        </pre>
+
     </div>
 </div>
 
@@ -114,8 +116,7 @@
 
 <div id="pointGalerie" class="galerie">
     <div class="galeryLayout">
-
-     <ul class="carouselPager" id="bx-pager">
+     <ul  class="carouselPager" id="bx-pager">
          <?php
 
             $linkcount = 0;
@@ -156,33 +157,55 @@
 
 
 <div id="pointCalender" class="calender">
-    <div class="googleCalender">
-        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=de&amp;bgcolor=%23ccccff&amp;src=nico.prechtl171%40gmail.com&amp;color=%23B1365F&amp;ctz=Europe%2FVienna" style="border:solid 1px #777" width="1200" height="600" frameborder="0" scrolling="no"></iframe>
-         </div>
+    <div class="googleCalender" >
+        <div class="calendarRight">
+            <div class="cal">
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=de&amp;bgcolor=%23ccccff&amp;src=nico.prechtl171%40gmail.com&amp;color=%23B1365F&amp;ctz=Europe%2FVienna" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="caltext">
+                <div class="calContact">
+                    <a id="goToContact" href="#pointContact"> Termin ausmachen </a>
+                </div>
+            </div>
+        </div>
+        <div class="calendarLeft">
+            <!--Hier kommt noch die Legende rein, z.b. roter punkt und daneben ein kleiner text wo steht "Belegte Termine" oder bei grünem punkt daneben "Freie Termine"-->
+        </div>
+
+
     </div>
+</div>
+
 <div id="pointContact" class="contact">
-    <div class="ContactDiv">
-        <p>
-            <?php echo $contactemail; ?>
-        </p>
-        <p>
-            <?php echo $contactanschrift; ?>
-        </p>
-        <p>
-            <?php echo $contacttelefon; ?>
-        </p>
+    <div class="ContactDiv" >
+        <div class="map">
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA1atrhnK8KcO6uKxeMBkGnJUvmU6xiG84'></script><div style='overflow:hidden;height:100%;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://fliegengitter-express.de/'>Fliegengitter-express.de</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=78bee7ab06d5e9b8c0dab521d02999282e0e1dba'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(48.38377129803107,13.849854171441617),mapTypeId: google.maps.MapTypeId.HYBRID};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.38377129803107,13.849854171441617)});infowindow = new google.maps.InfoWindow({content:'<strong>Astrid Hinterhölzl</strong><br>Kolmhof 4<br>4084 St. Agatha<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>
+        <div class="text">
+            <div class="pretext">
+                <h3>Anschrift:</h3>
+                <pre>
+                    <?php echo $contactanschrift ?>
+                </pre>
+                <h3>E-Mail:</h3>
+                <pre>
+                    <?php echo $contactemail ?>
+                </pre>
+                <h3>Telefon:</h3>
+                <pre>
+                    <?php echo $contacttelefon ?>
+                </pre>
+            </div>
+        </div>
     </div>
 </div>
 
 <div id="pointAbout" class="about">
     <div class="AboutDiv">
-        <p>
-            <?php echo $aboutlebenslauf; ?>
-        </p>
-        <p>
-            <?php echo $aboutausbildung; ?>
-        </p>
-
+        <h3>Ausbildung:</h3>
+        <pre><?php echo $aboutausbildung ?></pre>
+        <h3>Lebenslauf:</h3>
+        <pre><?php echo $aboutlebenslauf ?></pre>
     </div>
 </div>
 

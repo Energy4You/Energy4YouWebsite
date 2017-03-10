@@ -55,6 +55,7 @@ li a {
 .galerie {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
+
     background-image: url(../backgrounds/zwoa.jpg);
     background-repeat: no-repeat;
 
@@ -68,6 +69,7 @@ li a {
 .calender {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
+
     background-image: url(../backgrounds/drei.jpg);
     background-repeat: no-repeat;
 
@@ -79,6 +81,7 @@ li a {
 .contact {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
+
     background-image: url(../backgrounds/vier.jpg);
     background-repeat: no-repeat;
 
@@ -90,6 +93,7 @@ li a {
 .about {
     padding: 16px;
     height: 1080px; /* Used in this example to enable scrolling */
+
     background-image: url(../backgrounds/fuenf.jpg);
     background-repeat: no-repeat;
 
@@ -99,15 +103,16 @@ li a {
     background-size: cover;
 }
 
-
-
 /*Start Gallery:*/
 .galeryLayout{
-    margin-top: 7%;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     height: 30%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    !important;
+
 }
 
 .bxslider{
@@ -117,27 +122,124 @@ li a {
 
 
 .googleCalender{
+    background: rgba(255,255,255,0.94);
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
+    height: 60%;
+    padding: 1%;
+    font-family: 'Calibri Light';
+    font-size: 18px;
+    text-align: justify;
+    !important;
 }
 
+.calendarRight{
+    width: 80%;
+    height: 100%;
+}
+.calendarLeft{
+    width: 20%;
+    height: 100%;
+}
+
+.cal{
+    height: 90%;
+    width: 100%;
+
+}
+.caltext{
+    height: 10%;
+    width: 100%;
+    overflow: scroll;
+}
+
+.calContact{
+    margin-top: 1%;
+}
+
+
+
 .HomeDiv{
+    background: white;
+    opacity: 0.94;
+    position: relative;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    height: 30%;
+    width: 90%;
+    height: 60%;
+    padding: 1%;
+    font-family: 'Calibri Light';
+    font-size: 18px;
+    text-align: justify;
+    overflow: scroll;
+    !important;
 }
 
 .AboutDiv{
+    background: rgba(255,255,255,0.94);
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    height: 30%;
+    width: 90%;
+    height: 60%;
+    padding: 1%;
+    font-family: 'Calibri Light';
+    font-size: 18px;
+    text-align: justify;
+    !important;
 }
 
 .ContactDiv{
+    background: rgba(255,255,255,0.94);
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    height: 30%;
+    width: 90%;
+    height: 60%;
+    padding: 0.1%;
+    font-family: 'Calibri Light';
+    font-size: 18px;
+    text-align: justify;
+    !important;
 }
+
+.map{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.text{
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+}
+.pretext{
+    margin-left: 3%;
+}
+
+#goToContact{
+    color: black;
+}
+
+
+
+
