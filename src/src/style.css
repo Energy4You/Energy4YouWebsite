@@ -140,29 +140,27 @@ li a {
 }
 
 .calendarRight{
-    width: 80%;
+    width: 70%;
     height: 100%;
+    float: left;
 }
 .calendarLeft{
-    width: 20%;
+    width: 30%;
     height: 100%;
+    float: left;
+
 }
 
 .cal{
-    height: 90%;
+    height: 100%;
     width: 100%;
 
 }
-.caltext{
-    height: 10%;
-    width: 100%;
-    overflow: scroll;
-}
 
-.calContact{
-    margin-top: 1%;
+#legendText{
+    margin-left: 3%;
+    text-align: justify;
 }
-
 
 
 .HomeDiv{

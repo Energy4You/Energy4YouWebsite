@@ -1,32 +1,31 @@
-div.title
-{
-    color: #0098D4;
+body{
+    margin: 0%;
+    height: 1080px;
     font-family: "Calibri Light";
-    margin-left: 45%;
-    font-size: large;
-    position: absolute;
+    !important;
 }
-div.input
-{
-    margin-top: 10%;
-    left: 42.5%;
-    position: absolute;
-    font-family: "Calibri Light";
+
+.center{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
 }
-input.inputName
-{
-    margin-left: 2px;
-}
-form{
-    font-weight: bold;
-    font-family: "Calibri Light";
-    font-size: larger;
-}
-input.inputSubmit
-{
-    font-weight: bold;
-    font-family: "Calibri Light";
-    font-size: large;
+
+div.title{
+    width: 100%;
+    height: 5%;
     text-align: center;
-    width:100%;
+
+}
+
+div.input{
+    width: 100%;
+    height: 95%;
+    text-align: center;
 }

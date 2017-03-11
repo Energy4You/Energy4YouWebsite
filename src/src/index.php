@@ -162,13 +162,14 @@
             <div class="cal">
                 <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=de&amp;bgcolor=%23ccccff&amp;src=nico.prechtl171%40gmail.com&amp;color=%23B1365F&amp;ctz=Europe%2FVienna" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
             </div>
-            <div class="caltext">
-                <div class="calContact">
-                    <a id="goToContact" href="#pointContact"> Termin ausmachen </a>
-                </div>
-            </div>
         </div>
         <div class="calendarLeft">
+            <p id="legendText">
+                O - Belegte Termine</br></br>
+                O - Freie Termine</br></br></br>
+                Termine sind über Telefon oder E-Mail zu vereinbaren!</br></br>
+                <a id="goToContact" href="#pointContact"> Termin vereinbaren </a>
+            </p>
             <!--Hier kommt noch die Legende rein, z.b. roter punkt und daneben ein kleiner text wo steht "Belegte Termine" oder bei grünem punkt daneben "Freie Termine"-->
         </div>
 
