@@ -2,9 +2,9 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>SAdmin</title>
+    <title>Websitebearbeitung</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <link href="adminCss.css" type="text/css" rel="stylesheet">
+    <link href="adminSecretCss.css" type="text/css" rel="stylesheet">
     <script src="adminJS.js"></script>
 </head>
 <body>
@@ -15,40 +15,41 @@ if (!isset($_SESSION['login']))
     die('Bevor Sie diese Seite betreten können, müssen sie sich <a href="admin.php">einloggen!</a>');
 }
 ?>
-
-        <div style="margin-left: 40%;color: #0098D4;font-family: "Calibri Light">
-        <h1> Websitebearbeitung</h1>
+<div class="center">
+        <div  >
+        <h1 id="title"> Websitebearbeitung</h1>
         </div>
 
-        <div style="margin-left:40%;margin-top:5%;font-family: "Calibri Light";>
-        <h2 style="margin-left: -8%"> Bitte wählen sie die gewünschte Kategorie aus</h2>
+        <div >
+        <h2 id="instruction"> Bitte wählen sie die gewünschte Kategorie aus</h2>
         </div>
 
         <div id="pointEdit">
             <div>
-            <Button style="margin-left: 36%" onclick="rowcolumn('hauptseitetext','Text')">Hauptseite</Button>
+            <Button onclick="rowcolumn('hauptseitetext','Text')">Hauptseite</Button>
             <Button onclick="rowcolumn('kontakttext','Anschrift')">Anschrift</Button>
             <Button onclick="rowcolumn('kontakttext','Email')">E-Mail</Button>
             <Button onclick="rowcolumn('kontakttext','Telefon')">Telefon</Button>
             <Button onclick="rowcolumn('lebenslauftext','Lebenslauf')">Lebenslauf</Button>
             <Button onclick="rowcolumn('lebenslauftext','Ausbildung')">Ausbildung</Button>
             </div>
-            <pre style="margin-outside: 0%;">
-            <textarea id="textAreaEdit" style="height: 400px;width: 600px;margin-left: 28%;margin-top: 1%;"> Zu bearbeitender Text</textarea>
+            <pre>
+<textarea id="textAreaEdit"> Zu bearbeitender Text</textarea>
             </pre>
-            <input style="margin-left: 36%" type="submit" value="Bestätigen" onclick="writeToDatabase()">
+            <input type="submit" value="Bestätigen" onclick="writeToDatabase()">
         </div>
+    </br></br>
 
 
-        <div id="pictureUpload" style="margin-left: 36%">
+        <div id="pictureUpload" >
             <h2>Bilder Upload</h2>
 
-            <form style="margin-top: 1%" action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="file" id="passedFile">
-                <input type="submit" name="btn[upload]" value="Upload">
+            <form id="uploadpic" action="upload.php" method="post" enctype="multipart/form-data">
+                <input id="getFile" type="file" name="file" id="passedFile">
+                <input id="upload" type="submit" name="btn[upload]" value="Upload">
             </form>
         </div>
-
+</div>
     <script>
 
         var table;
