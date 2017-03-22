@@ -48,13 +48,13 @@
     }
 ?>
 
+
 <div id="pointHome" class="main">
+
     <div class="HomeDiv">
 
         <h1>hallo</h1>
-        <pre>
-            <?php echo $hometext ?>
-        </pre>
+        <pre><?php echo $hometext ?></pre>
 
     </div>
 </div>
@@ -165,8 +165,6 @@
         </div>
         <div class="calendarLeft">
             <p id="legendText">
-                O - Belegte Termine</br></br>
-                O - Freie Termine</br></br></br>
                 Termine sind über Telefon oder E-Mail zu vereinbaren!</br></br>
                 <a id="goToContact" href="#pointContact"> Termin vereinbaren </a>
             </p>
@@ -185,17 +183,11 @@
         <div class="text">
             <div class="pretext">
                 <h3>Anschrift:</h3>
-                <pre>
-                    <?php echo $contactanschrift ?>
-                </pre>
+                <pre><?php echo $contactanschrift ?></pre>
                 <h3>E-Mail:</h3>
-                <pre>
-                    <?php echo $contactemail ?>
-                </pre>
+                <pre><?php echo $contactemail ?></pre>
                 <h3>Telefon:</h3>
-                <pre>
-                    <?php echo $contacttelefon ?>
-                </pre>
+                <pre><?php echo $contacttelefon ?></pre>
             </div>
         </div>
     </div>
