@@ -18,7 +18,7 @@ if ($db_link) {
     $querySelectData = mysqli_query($db_link,"SELECT `" .$column."` FROM `".$table."` WHERE 1");
     $data = mysqli_fetch_array($querySelectData);
 
-    echo $data['Text'];
+    echo $data[$column];
 }
 else
 {

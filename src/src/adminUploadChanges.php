@@ -14,7 +14,8 @@ if ($db_link) {
     $column = $_GET['column'];
     $text = $_GET['text'];
 
-    $queryInsertData = mysqli_query($db_link,"Update `" .$table."` Set `".$column."` = '".$text."' WHERE 1");
+    $qry = "Update `" .$table."` Set `".$column."` = '".$text."' WHERE 1";
+    $queryInsertData = mysqli_query($db_link,$qry);
 
 
 
