@@ -81,10 +81,12 @@
     ftp_pasv($conn, true);
 
     $images = ftp_nlist($conn, $destination_file);
+
     $count = 0;
     $vorhanden = false;
     $checkImages = scandir('..\ressources');
-    foreach ($images as $image){
+
+    foreach ($images as $image){ //ftp Filecheck
 
         if ($image !== '.' && $image !== '..'){
             $picture =$count . '.jpg';
@@ -109,7 +111,6 @@
     ftp_close($conn);
 
     $alledateien = scandir('..\ressources');
-
 ?>
 
 
@@ -123,7 +124,6 @@
          foreach ($alledateien as $datei){
 
              if ($datei !== '.' && $datei !== '..') {
-
                  ?>
                  <a data-slide-index="<?php echo $linkcount; ?>" href=""><img class="thumber"
                                                                               src="../ressources/<?php echo $datei; ?>"/></a>
@@ -168,7 +168,6 @@
                 Termine sind über Telefon oder E-Mail zu vereinbaren!</br></br>
                 <a id="goToContact" href="#pointContact"> Termin vereinbaren </a>
             </p>
-            <!--Hier kommt noch die Legende rein, z.b. roter punkt und daneben ein kleiner text wo steht "Belegte Termine" oder bei grünem punkt daneben "Freie Termine"-->
         </div>
 
 
@@ -178,7 +177,9 @@
 <div id="pointContact" class="contact">
     <div class="ContactDiv" >
         <div class="map">
-            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA1atrhnK8KcO6uKxeMBkGnJUvmU6xiG84'></script><div style='overflow:hidden;height:100%;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://fliegengitter-express.de/'>Fliegengitter-express.de</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=78bee7ab06d5e9b8c0dab521d02999282e0e1dba'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(48.38377129803107,13.849854171441617),mapTypeId: google.maps.MapTypeId.HYBRID};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.38377129803107,13.849854171441617)});infowindow = new google.maps.InfoWindow({content:'<strong>Astrid Hinterhölzl</strong><br>Kolmhof 4<br>4084 St. Agatha<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOaszxMF5dEcR58jlyfdmA-E&key=AIzaSyAqexPyxLkzqUOS9MnHI2kVpqyfrQKyoCM" allowfullscreen></iframe>
+
         </div>
         <div class="text">
             <div class="pretext">

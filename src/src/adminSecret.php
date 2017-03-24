@@ -56,7 +56,7 @@ if (!isset($_SESSION['login']))
         var column;
 
         function rowcolumn($table,$column) {
-            alert('Tabelle: ' + $table + ', Spalte: ' + $column);
+            //alert('Tabelle: ' + $table + ', Spalte: ' + $column);
             table = $table;
             column = $column;
 
@@ -75,7 +75,7 @@ if (!isset($_SESSION['login']))
 
         function writeToDatabase()
         {
-            alert('Upload data');
+            //alert('Upload data');
 
             $text = $('#textAreaEdit').val();
             alert($text);
