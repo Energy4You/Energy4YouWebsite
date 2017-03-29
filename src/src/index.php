@@ -93,10 +93,12 @@
 
 
             foreach ($checkImages as $check){
+
+
                 if ($check == $picture){
                     $vorhanden = true;
                 }
-            }
+           }
             if ($vorhanden == false){
                 $ret = ftp_get($conn,'..\ressources\\'.$picture,"$destination_file$image",FTP_BINARY);
 
@@ -196,10 +198,8 @@
 
 <div id="pointAbout" class="about">
     <div class="AboutDiv">
-        <h3>Ausbildung:</h3>
-        <pre><?php echo $aboutausbildung ?></pre>
-        <h3>Lebenslauf:</h3>
-        <pre><?php echo $aboutlebenslauf ?></pre>
+        <div class="Ausbildung"><h3>Ausbildung:</h3><pre><?php echo $aboutausbildung ?></pre></div>
+        <div class="Lebenslauf"><h3>Lebenslauf:</h3><pre><?php echo $aboutlebenslauf ?></pre></div>
     </div>
 </div>
 

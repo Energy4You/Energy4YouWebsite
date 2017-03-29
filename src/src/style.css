@@ -199,7 +199,6 @@ li a {
     font-family: 'Calibri Light';
     font-size: 18px;
     text-align: justify;
-    overflow: auto;
     !important;
 }
 
@@ -241,3 +240,16 @@ li a {
     color: black;
 }
 
+.Lebenslauf{
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.Ausbildung{
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
