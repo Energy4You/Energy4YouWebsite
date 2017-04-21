@@ -8,8 +8,13 @@
     <meta charset="UTF-8">
     <link href="style.css" type="text/css" rel="stylesheet">
     <title>Energy4You</title>
+
+    <script src="click_toggle.js" type="text/javascript"></script>
+
 </head>
 <body>
+
+<body onload="clickMenu('outer','div','more')">
 
 <ul class="nav">
     <li class="firstListItemMenuTop"><a id="pHomeColor" href="#pointHome">Home</a></li>
@@ -51,12 +56,8 @@
 
 <div id="pointHome" class="main">
 
-    <div class="HomeDiv">
+    <div class="HomeDiv"><pre><?php echo $hometext ?></pre></div>
 
-        <h1>hallo</h1>
-        <pre><?php echo $hometext ?></pre>
-
-    </div>
 </div>
 
 
