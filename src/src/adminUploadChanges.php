@@ -31,7 +31,7 @@ if ($db_link) {
         echo "Upload erfolgreich";
     }
     else{
-        echo "Fehler beim Upload";
+        echo "Fehler beim Upload".$table." ".$column." ".$text;
     }
 
 }

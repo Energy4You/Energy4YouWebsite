@@ -186,11 +186,11 @@
         </div>
         <div class="text">
             <div class="pretext">
-                <h3>Anschrift:</h3>
+                <h3 style="color: orange;">Anschrift:</h3>
                 <pre><?php echo $contactanschrift ?></pre>
-                <h3>E-Mail:</h3>
+                <h3 style="color: orange;">E-Mail:</h3>
                 <pre><?php echo $contactemail ?></pre>
-                <h3>Telefon:</h3>
+                <h3 style="color: orange;">Telefon:</h3>
                 <pre><?php echo $contacttelefon ?></pre>
             </div>
         </div>
@@ -200,7 +200,7 @@
 <div id="pointAbout" class="about">
 
 
-        <div class="Lebenslauf"><h3>Lebenslauf:</h3><pre><?php echo $aboutlebenslauf ?></pre></div>
+        <div class="Lebenslauf" style="text-align: justify; line-height: 140%"><?php echo $aboutlebenslauf ?></div>
 
 </div>
 
