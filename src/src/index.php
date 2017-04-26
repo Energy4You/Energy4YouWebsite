@@ -56,7 +56,7 @@
 
 <div id="pointHome" class="main">
 
-    <div class="HomeDiv"><pre><?php echo $hometext ?></pre></div>
+    <div class="HomeDiv" style="text-align: justify; line-height: 140%"><?php echo $hometext ?></div>
 
 </div>
 
@@ -198,10 +198,10 @@
 </div>
 
 <div id="pointAbout" class="about">
-    <div class="AboutDiv">
-        <div class="Ausbildung"><h3>Ausbildung:</h3><pre><?php echo $aboutausbildung ?></pre></div>
+
+
         <div class="Lebenslauf"><h3>Lebenslauf:</h3><pre><?php echo $aboutlebenslauf ?></pre></div>
-    </div>
+
 </div>
 
 </body>

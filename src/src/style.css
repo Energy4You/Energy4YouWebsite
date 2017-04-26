@@ -241,10 +241,23 @@ li a {
 }
 
 .Lebenslauf{
-    width: 50%;
-    height: 100%;
-    float: left;
+    background: white;
+    opacity: 0.94;
+    position: relative;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    padding: 1%;
+    font-family: 'Calibri Light';
+    font-size: 18px;
+    text-align: justify;
     overflow: auto;
+!important;
 }
 
 .Ausbildung{
