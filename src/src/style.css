@@ -266,3 +266,69 @@ li a {
     float: left;
     overflow: auto;
 }
+
+.offer{
+    padding: 16px;
+    height: 1080px; /* Used in this example to enable scrolling */
+
+    background-image: url(../backgrounds/sechs.jpg);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.price{
+    padding: 16px;
+    height: 1080px; /* Used in this example to enable scrolling */
+
+    background-image: url(../backgrounds/siebn.jpg);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.OfferDiv{
+    background: white;
+    opacity: 0.94;
+    position: relative;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    padding: 1%;
+    font-family: 'Calibri Light';
+    font-size: 18px;
+    text-align: justify;
+    overflow: auto;
+!important;
+}
+
+.PriceDiv{
+    background: white;
+    opacity: 0.94;
+    position: relative;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    padding: 1%;
+    font-family: 'Calibri Light';
+    font-size: 18px;
+    text-align: justify;
+    overflow: auto;
+!important;
+}

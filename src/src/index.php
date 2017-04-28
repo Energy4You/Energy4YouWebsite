@@ -203,6 +203,18 @@
         <div class="Lebenslauf" style="text-align: justify; line-height: 140%"><?php echo $aboutlebenslauf ?></div>
 
 </div>
+<div id="pointOffer" class="offer">
+
+
+    <div class="OfferDiv" style="text-align: justify; line-height: 140%"><?php echo $aboutlebenslauf ?></div>
+
+</div>
+<div id="pointPrice" class="price">
+
+
+    <div class="PriceDiv" style="text-align: justify; line-height: 140%"><?php echo $aboutlebenslauf ?></div>
+
+</div>
 
 </body>
 </html>
