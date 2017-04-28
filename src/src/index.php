@@ -206,7 +206,7 @@
 <div id="pointOffer" class="offer">
 
 
-    <div class="OfferDiv" style="text-align: justify; line-height: 140%"><?php echo $aboutlebenslauf ?></div>
+    <div class="OfferDiv" style="text-align: justify; line-height: 140%"><?php echo $aboutlebenslauf ?><p style="text-align: center"><a id="goToPrice" href="#pointPrice">Zu den Preisen</a></p></div>
 
 </div>
 <div id="pointPrice" class="price">
