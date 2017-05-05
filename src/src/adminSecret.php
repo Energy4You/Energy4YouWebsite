@@ -32,6 +32,8 @@ if (!isset($_SESSION['login']))
             <Button onclick="rowcolumn('kontakttext','Telefon')">Telefon</Button>
             <Button onclick="rowcolumn('lebenslauftext','Lebenslauf')">Lebenslauf</Button>
             <Button onclick="rowcolumn('lebenslauftext','Ausbildung')">Ausbildung</Button>
+                <Button onclick="rowcolumn('abouttext','Text')">About</Button>
+                <Button onclick="rowcolumn('preistext','Text')">Preis</Button>
             </div>
             <pre id="TextFontPre">
 <textarea id="textAreaEdit"> Zu bearbeitender Text</textarea>
